@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventtia Demo Booking Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-image:url('https://i.pinimg.com/1200x/e6/6f/d1/e66fd1e74f32b873d0155eb768ac4229.jpg');opacity: 0.9; display: flex; justify-content: center; padding: 20px; margin: 0; }
+        
+        .container { background: white; width: 100%; max-width: 500px; border-radius: 15px; overflow: hidden; box-shadow:white 0 4px 20px ; }
+        
+        /* Header Section */
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 25px; border-bottom: 1px solid #eee; }
+        .logo { font-size: 24px; font-weight: bold; color: #000; }
+        .sign-up-btn { border: 1.5px solid #000; padding: 6px 15px; border-radius: 20px; text-decoration: none; color: #000; font-weight: 500; font-size: 14px; }
+        
+        /* Content Section */
+        .content { padding: 30px 25px; text-align: center; }
+        h1 { font-size: 26px; margin-bottom: 25px; color: #1a1a1a; line-height: 1.2; }
+        
+        /*  Images */
+        .experts { display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; }
+        .expert-circle { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #8e44ad; overflow: hidden; }
+        .expert-circle img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Form  */
+        .form-group { display: flex; align-items: center; margin-bottom: 15px; text-align: left; }
+        label { width: 150px; font-size: 14px; color: #555; }
+        input, select, textarea { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px; outline: none; }
+        input:focus { border-color: #8e44ad; }
+        
+        .help-text { text-align: left; font-weight: bold; margin: 20px 0 10px; color: #333; }
+        textarea { width: 100%; height: 80px; resize: none; margin-bottom: 15px; }
+        
+        .disclaimer { font-size: 11px; color: #777; text-align: left; line-height: 1.4; margin-bottom: 25px; }
+        .disclaimer a { color: #007bff; text-decoration: none; }
+
+        /* Button */
+        .book-btn { background-color: #1a335d; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 16px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; }
+        .book-btn:hover { background-color: #122646; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">a.eventsphere</div>
+        <a href="signup.html" class="sign-up-btn">Sign up</a>
+    </div>
+
+    <div class="content">
+        <h1>Book a demo with<br>one of our experts</h1>
+
+        <div class="experts">
+            <div class="expert-circle"><img src="https://i.pravatar.cc/150?u=1"></div>
+            <div class="expert-circle"><img src="https://i.pravatar.cc/150?u=2"></div>
+            <div class="expert-circle"><img src="https://i.pravatar.cc/150?u=3"></div>
+        </div>
+
+        <form action="booking_process.php" method="POST">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="full_name" placeholder="Full Name" required>
+    </div>
+
+    <div class="form-group">
+        <label>Business Email</label>
+        <input type="email" name="business_email" placeholder="name@company.com" required>
+    </div>
+
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="text" name="phone" placeholder="+92" required>
+    </div>
+
+    <div class="form-group">
+        <label>Expected attendees</label>
+        <select name="attendees">
+            <option value="">Please Select</option>
+            <option value="1-50">1-50</option>
+            <option value="51-200">51-200</option>
+            <option value="200+">200+</option>
+        </select>
+    </div>
+
+    <p class="help-text">Help us understand your events and your need</p>
+    <textarea name="event_details" placeholder="Tell us more about your events..."></textarea>
+
+    <button type="submit" class="book-btn">
+        <i class="far fa-clock"></i> Book a call
+    </button>
+</form>
+    </div>
+</div>
+
+<script>
+    // Form submition
+document.querySelector('form').onsubmit = function(e) {
+    var email = document.querySelector('input[name="business_email"]').value;
+    var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //email pattern
+    
+    if (!pattern.test(email)) {
+        alert("Please enter a valid email address!");
+        e.preventDefault(); // Form submitted
+    }
+};
+</script>
+
+</body>
+</html>

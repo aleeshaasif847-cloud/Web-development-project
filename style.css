@@ -1,0 +1,1101 @@
+
+*{ margin:0; padding:0;}
+
+html,body{ width:100%; height:100%; }
+
+#main{ width:100%; height:100%;}
+    
+    /* ===================================================================== */
+    /* ============================== HEADER ============================== */
+    /* =================================================================== */
+
+
+    #fakeH{ width:100%; height:20%; } 
+
+    header{ width:100%; 
+            height:20%;
+            background-color: rgb(255, 255, 255);
+            display:flex;
+            align-items: center;
+            position: fixed;
+            z-index: 100; }
+
+    table{ width:100%; border-collapse: collapse; }
+
+    th, td{ text-align: center; }
+
+    td a{   text-decoration: none; color:black; font-weight: lighter; font-size: small; }
+
+    td a:hover{ cursor: pointer; text-decoration: underline; font-weight: bold; }
+
+    .colm1{ width:25%; padding-right:10px;}
+
+    #colm2{ width:50%; border-right:1px solid black; border-left:1px solid black; }
+
+    #colm2 h1{ text-decoration: underline; font-family: 'Viaoda Libre'; font-size: 40px; }
+
+    #colm2 h6{ font-size:16px; }
+
+    .colm1 h3{ font-family: 'Viaoda Libre'; }
+        
+    .row1{  width:25%;  padding-top:10px; }
+
+    #row2{ width:50%; border-right:1px solid black; border-left:1px solid black; }
+
+
+/* ====================== RESPONSIVE DESIGN ======================== */
+/* Tablets */
+@media (max-width: 992px) {
+    header {  height: auto;  padding: 15px 0;}
+    #fakeH { height: 130px;}
+    #colm2 h1 { font-size: 32px;}
+    #colm2 h6 { font-size: 12px;}
+    .colm1 h3 { font-size: 16px; }
+    td a { font-size: 12px;}
+}
+@media screen and (max-width:668px){
+#fakeH{height:150px;}
+}
+@media (max-width: 652px) {
+    #fakeH { height: 170px;}
+}
+/* Mobile devices */
+@media (max-width: 440px) {
+
+    table, tr{ width: 100%;}
+    th, td{ width: 100%; padding: 5px 0; }
+    header { text-align: center; height: auto; padding: 10px 0; }
+    #fakeH { height: 160px; }
+    #colm2 h1 { font-size: 26px; }
+    #colm2 h6 { font-size: 10px; }
+    .colm1 h3 { font-size: 14px; }
+    td a { font-size: 10px; display: inline-block; }
+}
+
+    /* ===================================__======__================================ */
+    /* ======================|\ | /\ \  /|__| /\ |__|    ========================== */
+    /* ======================| \|/--\ \/ |__|/--\|  \============================= */
+
+    
+/* NAVBAR */
+#navbar{ width:100%;
+         height:60px;
+         background:black;
+         display:flex;
+         align-items:center;
+         justify-content:space-between;
+         padding:0 20px; }
+
+/* SOCIAL ICONS */
+#bar1{ width: 20%; display:flex; }
+
+.icon{ padding:7px; margin-right:10px; border-radius:10px; color:white; }
+.icon a{ padding:7px 0px 7px 7px; margin-right:10px; border-radius:10px; color:white; }
+.icon:hover{ background:grey;  cursor:pointer; box-shadow: white 0 0 3px;}
+.icon a:hover{ background:grey;  cursor:pointer;}
+
+/* TOOLTIP 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.title {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}          */
+
+/* MENU */
+#bar2{  width: 80%; display: flex; flex-direction: column; justify-content: center; }
+
+#bar2 ul{ margin:7px; display:flex;  list-style:none;}
+
+#bar2 ul li{ margin:0 15px;}
+#bar2 ul li { color:white; font-weight:bold; text-decoration:none; }
+#bar2 ul li:hover{ color:grey; cursor: pointer;}
+#bar2 ul li a{ color:white; font-weight:bold; text-decoration:none; }
+
+#bar2 ul li a:hover{ color:grey;}
+
+#signup button{display: none;}
+ #signup  button{
+        color:white; margin:0px;
+        background: transparent; cursor:pointer;
+        border: 1px solid black; border-radius: 30px;
+        box-shadow:rgb(188, 153, 49) 0 0 5px ;
+        }
+#signup button:hover{ font-weight: lighter; border-color: rgb(188, 153, 49);text-decoration: none; }
+
+
+/* HAMBURGER */
+.menu-toggle{ display:none; font-size:26px; color:white; cursor:pointer; }
+
+
+
+/*-----menu--toggle--------*/
+#homebar{
+    z-index: 1000;
+    position:absolute;
+    width: 32%;
+    height: 50%;
+    box-shadow: white 0 0 5px;
+    border-bottom-right-radius:20px ;
+    background-color: black;
+    transition: 0.5s ease;
+    display:none;
+}
+
+#home-toggle li{
+    padding:20px 20px ;
+    list-style: none;
+}
+#home-toggle li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+#home-toggle li:hover{
+    background-color: rgb(53, 53, 53);
+}
+input::selection~#home{
+    top:-300px;
+}
+
+
+
+
+/*---------MOBILE-----RESPONSIVE-------- */
+@media screen and (max-width:668px){
+    .menu-toggle{ display:block; margin-right:10px; }
+    #signup button{display: inline-block;}
+    #bar2{
+        z-index: 99;
+        position:absolute;
+        top:210px;
+        left:0px; 
+        width:100%;
+        background:black;
+        display:none; 
+        transition: 0.5s ease;
+        font-size: 20px;
+        box-shadow: white 0 0 5px;
+        border-bottom-right-radius:20px;
+        border-bottom-left-radius:20px;}
+
+    #bar2.active{display:block; }
+    #bar2 ul{ flex-direction:column; text-align: center;  font-size: smaller; text-decoration: none; }
+    #bar2 ul li{ margin:15px 0; border-bottom:1px solid rgb(43, 43, 43); }
+    
+
+    /*-----menu--toggle--------*/
+    #homebar{ width:100%; height:40%;
+            top:272px; border-bottom-left-radius: 20px;}
+    #home-toggle{margin-top: 30px; text-align: center;}
+    #home-toggle li{ padding:15px 15px ; border-bottom:1px solid rgb(40, 40, 40);}
+    #home-toggle li a{ font-size: 18px;}
+
+    }
+
+
+
+
+/*------------RESPONSIVE-------- */    
+    @media screen and (max-width:652px){
+        #bar1{margin-top: 8px;;}
+    #signup button{display: inline-block;}
+    #bar2{
+        z-index: 99;
+        position:absolute;
+        top:230px;
+        left:0px;}
+    }
+
+  /*-------SMALL-DEVICES------RESPONSIVE-------*/
+@media screen and (max-width:400px){
+    #navbar{margin-top: -5px;}
+    .menu-toggle{ display:block; margin-right:10px; }
+    #signup button{display: inline-block;}
+    #bar2{ position:absolute; top:210px; left:0px;  width:100%; display:none;  font-size: 16px;}
+    #bar2.active{display:block; }
+}
+
+
+
+    /* ========================================================== */
+    /* ======================   Page 01 ======================== */
+    /* ======================================================== */
+
+    
+/* SECTION */
+.page1{
+    width:100%;
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+/* BACKGROUND IMAGE */
+.bg-img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.7;
+    z-index:-1;
+}
+
+/* CONTENT WRAPPER */
+.content{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    gap:20px;
+}
+
+/* TEXT BOX */
+#box1{
+    max-width:420px;
+    text-align:right;
+}
+
+#box1 h1{
+    font-family: 'IM Fell Double Pica';
+    font-size:45px;
+    font-weight:400;
+    margin:0px 0 0px;
+
+}
+
+#box1 h6{
+    margin:0px 0 30px;
+    font-style:oblique;
+    font-weight:bold;
+}
+
+#box1 p{
+    font-weight:bold;
+    line-height:1.5;
+}
+
+#box1 a button{
+    margin-top:40px;
+    padding:15px 50px;
+    border:2px solid black;
+    border-radius: 25px;
+    box-shadow:black 0 0 5px ;
+    background:transparent;
+    font-weight:bold;
+}
+
+#box1 a button:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    font-weight: lighter;
+}
+
+/* IMAGES */
+.images{
+    position:relative;
+    display:flex;
+    align-items:center;
+}
+
+#box2 img{
+    width:380px;
+    height:420px;
+    object-fit:cover;
+    opacity:0.85;
+}
+
+#box3{
+    width:220px;
+    height:280px;
+    border:14px solid rgb(48, 43, 43);
+    position:absolute;
+    right:-120px;
+    top:180px;
+}
+
+#box3 img{ width:100%; height:100%;  object-fit:cover; }
+
+/* TABLET RESPONSIVE */
+@media (max-width:992px){
+
+    .content{ flex-direction:row; align-items:center; }
+
+    button{ margin:20px 0 10px; padding:10px 30px; }
+
+    .images{ margin-top:10px;}
+
+    #box2 img{
+    width:240px;
+    height:320px;
+    object-fit:cover;
+    opacity:0.85;}
+
+    #box3{
+        width:150px;
+        height:200px;
+        position:relative;
+        right:100px;
+        top:40px;
+        margin-top:20px;
+    }
+}
+/* MOBILE RESPONSIVE */
+@media (max-width:532px){
+    .page1{ padding:20px;}
+
+    .content{
+            flex-direction:column;
+            align-items:center;
+            justify-content: flex-start;
+            gap:0px;
+            margin-right: 0px; }
+
+    #box1{ text-align:center; }
+    #box1 h1{ font-size:38px;}
+    #box1 h6{ font-size:10px;}
+    #box1 p{ font-size:12px;}
+
+    button{ padding:8px 15px; font-size:12px; }
+    .images{ align-items:center;  }
+
+    #box2 img{
+    width:240px;
+    height:250px;
+    object-fit:cover;
+    opacity:0.85;
+    position:relative;
+    right:0px;
+    top:0px;
+    }
+    #box3{
+        width:160px;
+        height:150px;
+        position:relative;
+        right:60px;
+        top:20px;
+        margin-top:20px;
+        border:10px solid rgb(48, 43, 43);
+    }
+}
+
+/*-------SMALL-DEVICES-----RESPONSIVE--------*/
+@media (max-width:400px){
+    #box2{ width:200px; margin-left: 10px;}
+
+}
+
+
+    /* ========================================================== */
+    /* ======================   Page 02 ======================== */
+    /* ======================================================== */
+
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.page2{
+    width:100%;
+    min-height:100vh;
+    background-color: rgb(48, 43, 43);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:40px 0;
+}
+
+#rect1{
+    width:80%;
+    text-align:center;
+    color:white;
+    margin-bottom:30px;
+}
+
+#rect1 h1{
+    font-family:'Viaoda Libre', serif;
+    font-size:clamp(28px, 4vw, 50px);
+    margin-bottom:10px;
+}
+
+#rect1 p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+#rect2{
+    width:80%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+#rect2 .slide{
+    width:35%;
+    height:300px;
+}
+
+#rect2 .slide3{
+    width:30%;
+    height:260px;
+}
+
+#rect2 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+/* ✅ Tablet */
+@media (max-width: 992px){
+    #rect2{
+        flex-wrap:wrap;
+    }
+
+    #rect2 .slide,
+    #rect2 .slide3{
+        width:45%;
+        height:260px;
+    }
+}
+
+/* ✅ Mobile */
+@media (max-width: 576px){
+    #rect1{width:90%;}
+
+     #rect1 h1{ font-size: 34px;}
+    #rect1{ font-size: 12px;}
+    #rect1 p{ font-size: 13px;}
+
+
+    #rect2{
+        flex-direction:column;
+        width:90%;
+    }
+
+    #rect2 .slide,
+    #rect2 .slide3{
+        width:100%;
+        height:240px;
+    }
+}
+
+
+
+
+
+    /* ========================================================== */
+    /* ======================   Page 03 ======================== */
+    /* ======================================================== */
+
+
+    .page3{
+        width: 100%;
+        height: 100%;
+        background-color:antiquewhite;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .page3 #content1{
+        width:80%;
+        height:60%;
+        margin:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+
+    } 
+    .page3 #content2{
+        width:80%;
+        height:30%;
+        margin:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .page3 #content1 #pic1{ width:50%; height:100%; margin-right: 12px;
+                            border-top-left-radius:100px ;
+                            border-top-right-radius:100px ;}
+
+    .page3 #content1 #pic1 img{ width:100%; height:100%; object-fit: cover;
+                                border-top-left-radius:100px ;
+                                border-top-right-radius:100px ;}
+    
+    .page3 #content1 #text1{ width:100%; height:100%;}
+
+    .page3 #content1 #text1 h1{
+        margin: 0px;
+        padding: 0px;
+        font-size: 70px;
+        font-weight: lighter;
+        font-family:'Imperial Script';
+    }
+    .page3 #content1 #text1 h2{ padding: 0px; font-size: 50px; font-family:'Viaoda Libre'; }
+    .page3 #content1 #text1 p{font-size: 15px;}
+
+    .page3 #content1 #text1 a button{
+    margin-top: 30px;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 2px solid black;
+    box-shadow:burlywood 0 0 8px ;
+    background: transparent;
+    font-weight: bold;}
+.page3 #content1 #text1 a button:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    font-weight: lighter;}
+                            
+    .page3 #content2 #pics #pic2{ border-bottom-left-radius:80px ; }
+    .page3 #content2 #pics #pic2 img{ border-bottom-left-radius:80px ; }
+
+    .page3 #content2 #pics #pic3{ border-top-right-radius:80px ; }
+    .page3 #content2 #pics #pic3 img{ border-top-right-radius:80px ; }
+    
+    .page3 #content2 #pics{ width:100%; height:100%; display: flex; align-items: center; justify-content: center; margin-top: 10px; }
+    .page3 #content2 #pics img{  width:100%; height:100%; object-fit: cover; }
+
+    .page3 #content2 .pic{ width:50%; height:100%;  margin-right: 5px; }
+    .page3 #content2 .pic img{ width:100%; height:100%; object-fit: cover; }
+
+
+/*-------MOBILE-----RESPONSIVE--------*/
+@media screen and (max-width:513px){
+    .page3 #content1 #text1{ width:50%; }
+    .page3 #content1 #text1 h1{ font-size: 50px;}
+    .page3 #content1 #text1 h2{ font-size: 33px;}
+    .page3 #content1 #text1 p{font-size: 12px;}
+    .page3 #content1 #pic1{ width:40%; height:80%; margin-left: -20px;}
+    .page3 #content2 #pics{margin-top: -50px;}
+    .page3 #content2 #pics #pic2{width: 70%; margin-left:6px;}
+}
+
+
+/*-------SMALL-DEVICES-----RESPONSIVE--------*/
+@media (max-width:400px){
+    .page3 #content1{ height:60%;}
+    .page3 #content1 #text1{ height:90%; margin-bottom:-50px; }
+    .page3 #content1 #text1 h1{ font-size: 47px;}
+    .page3 #content1 #text1 h2{ font-size: 33px;}
+    .page3 #content1 #text1 p{font-size: 12px;}
+    .page3 #content1 #pic1{ height:90%; margin-bottom:-50px;}
+    .page3 #content2 #pics{ margin-top: 0px;}
+    .page3 #content2 #pics #pic2{ margin-left:0px;}
+    .page3 #content2 #pics #pic3 img{ border-top-right-radius:60px ; }
+}
+
+
+        /* ============================================================== */
+        /* ======================   Page 04      ======================= */
+        /* ============================================================ */
+    .page4{
+        width:100%;
+        height: 100%;
+        background-color: rgb(48, 43, 43);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #dash1{
+        width:80%;
+        height:30%;
+        text-align: center;
+        color:white;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #dash1 #head h1{ font-family:"Monsieur La Doulaise",cursive; font-weight: 400; font-size:50px; }
+    #dash1 #head h3{ font-family: 'Viaoda Libre'; margin-top: -20px; }
+    #dash1 #para p{ text-align: left; margin-left:20px; }
+
+        
+    #dash2{ width:80%; height:50%; display:flex; align-items: center; justify-content: center; }
+
+    #dash2 .flora{ width:35%; height: 100%; border-radius: 10px; }
+
+    #dash2 .flora1{ width:30%; height:80%;margin:20px; border-radius: 10px;}
+
+    #dash2 .flora img{ width:100%; height:100%; object-fit: cover; border-radius: 10px; }
+
+    #dash2 .flora1 img{ width:100%; height:100%; object-fit: cover; border-radius:10px; }
+
+    .page4 button { margin-top: 30px;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow:burlywood 0 0 8px ;
+    background: transparent;
+    font-weight: bold;}
+    .page4  a button:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    font-weight: lighter;}
+  
+  /* =======RESPONSIVE=============== */  
+@media screen and (max-width:513px) {
+    #dash1{ height:20%;}
+    #dash1 #para p{ font-size: 14px; }
+    #dash2{ height:40%;margin-top: 40px;}
+    #dash2 .flora{ width:50%; }
+    #dash2 .flora1{ width:40%; height:80%;margin:10px;}
+    .page4 button{ margin-top:40px;}
+
+}
+/*---------SMALL-DEVICES------RESPONSIVE-------*/
+@media screen and (max-width:400PX){
+    .page4{height:190%; justify-content:start;}
+    #dash1,#dash2{ width:90%;}
+    #dash2{height:750px; flex-direction: column; justify-content: start; margin-top:0px;}
+    #dash2 .flora{ width:100%; height:240px; }
+    #dash2 .flora1{ width:80%; height:200px; margin:20px;}
+} 
+
+
+
+
+    /* ========================================================== */
+    /* ======================   Page 05 ======================== */
+    /* ======================================================== */
+
+
+    .page5{ width:100%; height: 90%; background-color:rgb(189, 115, 62); display: flex; align-items: center; }
+     
+    .page5 #text2{
+        width:70%;
+        height:80%;
+        text-align: right;
+        color:white;
+        margin:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+      .page5 #text2 #camera{ width:40%; height:90%; }
+      .page5 #text2 #camera #c1{ width:65%; height:65%; border: 2px solid white; }
+
+      .page5 #text2 #camera #c2{
+        width:50%;
+        height:50%;
+        position: relative;
+        left:40%;
+        bottom:35%;
+        border: 2px solid white;
+      }
+       #camera #c1 img,#c2 img{ width:100%; height:100%; object-fit: cover; }
+      .page5 #text2 #writing{ width:60%; height:60%; text-align: left;}
+      .page5 #text2 #writing h1{ font-family: 'Viaoda Libre'; font-size: 45px; }
+
+      .page5 #reel{
+        width:35%;
+        height:90%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .page5 #reel #gragh{
+        width: 50%;
+        height: 90%;
+        position: relative;
+        top:65%;
+        left:-5%;
+        transform:translate(-50%,-50%);
+        rotate:20deg;
+      }
+
+    .page5 #reel .photo{width: 100%; height: 35%;
+                        border:7px solid rgb(218, 210, 210);
+                        border-bottom: 20px solid rgb(218, 210, 210);}
+
+    .page5 #gragh .photo img{ width:100%; height:100%; object-fit: cover; }
+
+    /* -----TABLET----RESPONSIVE-----*/
+    @media screen and (max-width:756px) {
+        .page5 #text2 #writing h1{ font-size: 42px;}
+         .page5 #text2 #writing p{ font-size: 13px;}
+        .page5 #reel #gragh{ width: 65%; position: relative; left:10px;}
+    }
+
+    /* -----MOBILE----RESPONSIVE-----*/
+    @media screen and (max-width:547px){
+        .page5{ height: 70%;}
+         .page5 #text2 #writing h1{ font-size: 30px;}
+         .page5 #text2 #writing p{ font-size: 13px;}
+         .page5 #text2 #camera{ width:40%; height:70%; }
+        .page5 #reel #gragh{ width: 55%; height: 80%;
+                            position: relative; top:60%; left:-10%;}
+    }
+
+
+/*---------SMALL-DEVICES------RESPONSIVE-------*/
+@media screen and (max-width:400PX){
+    #camera{display: none;}
+    .page5 #text2{ width:60%; height:80%;}
+    .page5 #text2 #writing h1{ font-size:25px; }
+    .page5 #text2 #writing p{ font-size:12px; }
+    .page5 #text2 #writing{ width:100%; height:60%; text-align:center;}
+    .page5 #reel{ width:40%; height:100%; background-image: url('https://i.pinimg.com/1200x/f6/a5/27/f6a5274e87802ba4bbadda1be1656762.jpg');
+                    background-size: cover; background-repeat: no-repeat; background-position: center;}
+    .page5 #reel #gragh{
+        width: 70%; height: 70%;
+        position: relative; top:60%; left:-15%;
+        transform:translate(-50%,-50%); rotate:15deg;}
+
+}
+
+
+      /* ========================================================== */
+    /* ======================   Page 06 ======================== */
+    /* ======================================================== */
+
+    .page6{
+        width:100%;
+        height: 100%;
+        background-color: rgb(48, 43, 43);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+.page6 #services{ width:90%; height:20%; margin:20px; margin-bottom: 0px; }
+
+.page6 #services h1{
+    color:white;
+    text-align: center;
+    font-family: 'Viaoda Libre';
+    font-weight: bold;
+    font-size:500%;
+}
+.page6 #services p{ color:white; text-align: center; font-size: small; font-weight: lighter;}
+
+
+    .page6 #servebox{
+        width:90%;
+        height:70%;
+        margin:20px;
+        margin-top: 0px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .page6 #servebox .left, .center, .right{
+        width:100%;
+        height:70%;
+        border-radius: 20px;
+        margin:10px;
+        color:white;
+        position: relative;
+        box-shadow: black 0 0 15px;
+    }
+    .page6 #servebox .left img, .center img, .right img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .page6 #servebox .center{
+        z-index: 10;
+        width:180%;
+        height:90%;
+        background-image: url('https://i.pinimg.com/1200x/2e/ff/00/2eff008fee4fb69e5a4547e5beb250b5.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .page6 #servebox  #l1{
+        width:110%;
+        left:8%;  
+        background-image: url('https://i.pinimg.com/736x/ae/f0/37/aef037e430da4454cd92c6fafe734f7b.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+    .page6 #servebox #l2{
+        width:150%;
+        height:80%;
+        left:5%; 
+        background-image: url('https://i.pinimg.com/1200x/de/bb/dc/debbdcb430c726020b8c12f13afe1cf2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .page6 #servebox #r1{
+        width:150%;
+        height:80%;
+        right:5%;   
+        z-index: 5;
+        background-image: url('https://i.pinimg.com/736x/55/1a/c0/551ac0c32702b25eb8881dd77b40136e.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .page6 #servebox  #r2{
+        width:110%;
+        right:8%;  
+        background-image: url('https://i.pinimg.com/736x/cb/eb/dd/cbebddf5df105f662e9decbce8107537.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;  
+    }
+     
+    .page6 #servebox button{
+        width: 100%;
+        height: 35%;
+        position: absolute;
+        bottom:-10px;
+        left:50%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transform: translateX(-50%);
+        padding:15px 50px 15px 50px;
+        font-weight: bold;
+        font-size:large;
+        border:none;
+        background-color: rgba(0, 0, 0, 0.6);
+        color:white;
+        font-family: 'Viaoda Libre';
+    }
+    .page6 #servebox button:hover{
+        background-color: rgba(205, 203, 203, 0.8);
+        color:black;
+        cursor: pointer;
+        font-weight: lighter;
+        font-size:medium;
+    }
+ 
+/*----TABLET----RESPONSIVE----*/
+@media screen and (max-width:766px){
+    .page6 #services h1{ font-size:350% }
+    .page6 #servebox .center{ width:340%; }
+}
+
+/*----Mobile----RESPONSIVE----*/
+@media screen and (max-width:546px) {
+    .page6 #services h1{ font-size:350% }
+    .page6 #servebox{ width:100%; height:60%; margin:0px;}
+    .page6 #servebox .center{ width:340%; height:85%; }
+    .page6 #servebox #l2{ width:170%; height:70%;}
+    .page6 #servebox #r1{ width:170%; height:70%; }
+    .page6 #servebox #l1{ width:120%; height:50%; left:10%;} 
+    .page6 #servebox  #r2{ width:120%; height:50%; right:10%;}
+    .page6 #servebox button{position: absolute; bottom:-10px; left:50%;}
+}
+
+/*---------SMALL-DEVICES------RESPONSIVE-------*/
+@media screen and (max-width:400px){
+    .page6{height: 130%;}
+    .page6 #services{ width:90%; height:15%; margin-top:50px;}
+    .page6 #services h1{ font-size:300% }
+    .page6 #services p{ font-size:60% }
+
+    .page6 #servebox{ width:100%; height:110%; flex-direction: column; justify-content: start; margin-top: -140px;}
+    .page6 #servebox  #l1{width:70%;height: 10%; left: 0%;bottom:-150px ; }
+    .page6 #servebox  #l2{width:80%;height: 30%; left: 0%;bottom:-110px;}
+    .page6 #servebox .center{ width:90%; height:35%;}
+    .page6 #servebox  #r1{width:80%;height: 30%; right:0%; top:-110px ;}
+    .page6 #servebox  #r2{width:70%;height: 10%; right:0%; top:-150px ;}
+
+    .page6 #servebox button{
+        width: 100%; height:30%;
+        background-color: rgba(45, 45, 45, 0.6);
+        bottom:50px; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px;
+        }
+    
+}
+
+
+
+
+  /* ========================================================== */
+    /* ======================   Page 07 ======================== */
+    /* ======================================================== */
+
+    .page7{
+        width:100%;
+        height: 100%;
+        background-color:darkseagreen;
+        display: flex;
+       
+        flex-direction: column;
+    }
+
+    #demo{
+        text-align: center;
+        height:40%;
+        margin: 30px;
+    }
+    #demo h2{ font-weight: lighter;
+                color:rgb(41, 41, 41)}
+    #demo h1{ margin:20px;}
+    #demo p{ font-size:16px;}
+
+    #demo1{margin: 20px;}
+     #demo1 ul{ list-style: none;}
+
+    #demo1 li{ padding-bottom: 5px; margin: 10px; border-bottom:1px solid black ;}
+
+    #demo1 li a{
+        font-size: 25px;
+        font-weight: bolder;
+        text-decoration: none;
+        color: black;
+        padding: 5px;
+    }
+    #demo1 li a:hover{
+        background-color:rgb(175, 216, 175) ;
+    }
+    #demo1 li i{ font-size: 25px;}
+
+    #demo1 li button {
+        box-shadow:rgb(92, 132, 92) 0 0 5px ;
+        font-size: 15px;
+        font-weight: normal;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 8px;
+        background: transparent;
+    }
+    #demo1 li button:hover{ cursor: pointer; text-decoration: none;  font-size:16px;}
+
+     @media screen and(max-width:860px) {
+        #demo1 h1{font-size: 15px;}
+        ul li a{ font-size: 16px;}
+    }
+    @media screen and(max-width:830px) {
+         #demo h1{ font-size:16px;}
+        #demo1 h1{font-size: 15px;}
+        ul li a{ font-size: 15px;}
+    }
+   
+    @media screen and(max-width:566px) {
+        #demo1 h1{font-size: 14px;}
+        ul li a{ font-size: 14px;}
+    }
+
+
+    /* ===================================================================== */
+    /* ============================== FOOTER ============================== */
+    /* =================================================================== */
+
+     footer{
+        width:100%;
+        height: 100%;
+        background-color: rgb(48, 43, 43);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer #about{
+        width:95%;
+        height:50%;
+        margin:10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer #about {
+        background-image: url('https://i.pinimg.com/1200x/cf/98/cd/cf98cd68e476089a7bf8a9ba80cd644a.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.5;
+
+     }
+
+     #about h1{
+        color: rgb(0, 0, 0);
+        text-align: center;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: bold;
+        font-size:450%;
+        text-shadow: white 0 0 15px;
+    }
+    footer #details{ width:90%; height:60%;  margin:10px; margin-top: 0px; }
+
+    footer #details #contact{ width:45%; height:100%; float:left; color: white; }
+
+    footer #details #contact #list{ display: flex; align-items: start; flex-direction: column; float: left; }
+
+    footer #details #contact .info a{ font-weight: lighter; text-decoration: none; color:rgb(167, 161, 161); }
+
+    footer #details #contact .info a:hover{ text-decoration: underline; font-weight: bold; cursor: pointer; }
+
+    footer #details #query{ width:45%; height:100%; float:right; color:white; }
+
+    footer #details #query h1{ color:white; text-align: left; font-size: 360%; font-weight:lighter;}
+
+    #query a button{ margin-top:40px;
+    padding:15px 50px;
+    border:1px solid black;
+    border-radius: 25px;
+    box-shadow:white 0 0 5px ;
+    font-weight:bold;}
+
+     #query a button:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    font-weight: lighter;}
+
+
+/*-----RESPONSIVE-----*/
+@media screen and (max-width:550px){
+        #about h1{ font-size:420%;}
+        
+        footer #about{ width:100%; height:30%;}
+        #list li{font-size: 14px;}
+    }
+    /*-----RESPONSIVE-----*/
+    @media screen and (max-width:663px){
+        footer #details #query h1{ font-size:270%;}  
+    }
+
+    /*---------SMALL-DEVICES------RESPONSIVE-------*/
+@media screen and (max-width:400px){
+    footer{margin-top: -50px;}
+     #about h1{font-size: 50px};
+    footer #details #query h1{ font-size:100%;}
+    footer #details #query p{ font-size:14px;}
+    #contact h2{font-size: 20px;}
+    #list li{font-size: 12px;}
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    flex-wrap: wrap; 
+}
+
+.image-box, .text-box { flex: 1; min-width: 300px; }
+
+.image-box img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.tagline { color: #888; font-size: 0.9rem; }
+h2 { font-size: 2.5rem; margin: 15px 0; }
+.text-box p { color: #ccc; margin-bottom: 30px; }
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #fff;
+    box-shadow:white 0 0 5px ;
+    color: #000;
+    text-decoration: none;
+    border:1px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+}
+.btn-primary:hover{ font-weight: lighter;}
+
+
+.skills-stats-section {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.skills-box, .stats-grid { flex: 1; min-width: 300px; }
+
+
+.skill-item { margin-top: 25px; }
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+.progress-bar {
+    height: 4px;
+    background: #333;
+    width: 100%;
+}
+.progress {
+    height: 100%;
+    background: #fff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.stat-card h4 { font-size: 2rem; margin-bottom: 5px; }
+.stat-card p { color: #888; font-size: 0.85rem; }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-stats-section {
+        flex-direction: column;
+    }
+
+    h2 { font-size: 2rem; }
+}
+</style>
+
+
+
+
+
+<body>
+
+    <main class="content-wrapper">
+        <section class="intro-section">
+            <div class="image-box">
+                <img src="https://i.pinimg.com/1200x/8f/1a/16/8f1a1635e6ac2c77469d2257e5694d6f.jpg">
+            </div>
+            <div class="text-box">
+                <span class="tagline">About Us</span>
+                <h2>We Always Make The Best</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id odio placerat, convallis neque quis, interdum leo. Nam hendrerit urna nibh, eget sagittis erat varius non.</p>
+                <a href="contact.html" class="btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+        <section class="skills-stats-section">
+            <div class="skills-box">
+                <h3>Our Skills</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                
+                <div class="skill-item">
+                    <div class="skill-info"><span>Event planning</span><span>85%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Decor Management</span><span>90%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info"><span>Branding</span><span>77%</span></div>
+                    <div class="progress-bar"><div class="progress" style="width: 77%;"></div></div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>20+</h4>
+                    <p>Year Of Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h4>1,000+</h4>
+                    <p>Project Done</p>
+                </div>
+                <div class="stat-card">
+                    <h4>300+</h4>
+                    <p>Satisfied Client</p>
+                </div>
+                <div class="stat-card">
+                    <h4>64</h4>
+                    <p>Certified Award</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

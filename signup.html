@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+
+
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #002b36 0%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.card {
+    background: #fff;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.branding-side {
+    flex: 1;
+    background: url('https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: white;
+    position: relative;
+}
+
+.branding-side::before {
+    content: '';
+    position: absolute;
+    top:0; left:0; right:0; bottom:0;
+    background: rgba(0,0,0,0.3); /* Darken image for text readability */
+}
+
+.branding-content {
+    position: relative;
+    z-index: 1;
+}
+
+.branding-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Form Side */
+.form-side {
+    flex: 1;
+    padding: 40px;
+    background: white;
+    border-radius: 25px;
+}
+
+.form-side h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.terms {
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-join {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 0.8rem;
+    color: #888;
+    position: relative;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    height: 1px;
+    width: 40%;
+    background: #eee;
+    position: absolute;
+    top: 50%;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+.btn-social {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-social.apple {
+    background: #111;
+    color: white;
+}
+
+
+button:hover{
+    background-color: #888;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+    
+    .branding-side {
+        min-height: 200px;
+        padding: 30px;
+    }
+
+    .branding-content h1 {
+        font-size: 1.8rem;
+    }
+}
+</style>
+
+
+
+
+
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="branding-side">
+                <div class="branding-content">
+                    <h1>Create your Account</h1>
+                    <p>watch our artwork and Get to know our new projects!</p>
+                </div>
+            </div>
+
+           <div class="form-side">
+    <h2>Sign Up</h2>
+    <form action="signup_process.php" method="POST">
+        <div class="input-group">
+            <input type="text" name="first_name" placeholder="First name" required>
+        </div>
+        <div class="input-group">
+            <input type="text" name="last_name" placeholder="Last name" required>
+        </div>
+        <div class="input-group">
+            <input type="email" name="email" placeholder="Email address" required>
+        </div>
+        <div class="input-group">
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+
+        <div class="terms">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Accept Terms & Conditions</label>
+        </div>
+
+        <button type="submit" name="signup_btn" class="btn-join">Join us &rarr;</button>
+
+        <div class="divider">or</div>
+
+        <button type="button" class="btn-social google">
+            <img src="https://www.gstatic.com/images/branding/product/1x/googleg_48dp.png" width="18" alt="Google Logo"> Sign up with Google
+        </button>
+        <button type="button" class="btn-social apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" width="15" style="filter: invert(1);"> Sign up with Apple
+        </button>
+    </form>
+</div>
+        </div>
+    </div>
+</body>
+</html>

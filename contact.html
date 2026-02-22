@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+
+
+
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+}
+
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.subtitle { color: #888; font-size: 0.9rem; margin-bottom: 5px; }
+h1 { font-size: 2.5rem; margin-bottom: 30px; }
+
+.input-group { margin-bottom: 20px; }
+.input-group label { display: block; color: #dcdada; font-size: 0.8rem; margin-bottom: 8px; }
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+}
+
+.btn-send {
+    width: 100%;
+    padding: 15px;
+    background: transparent;
+    color: white;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.description { color: #aaa; line-height: 1.6; margin-bottom: 40px; }
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.info-item i { font-size: 1.5rem; margin-bottom: 10px; display: block; }
+.info-item h3 { font-size: 1rem; margin-bottom: 5px; }
+.info-item p { color: #aaa; font-size: 0.9rem; }
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Responsive  */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+</style>
+
+
+
+
+
+
+<body>
+
+<section class="contact-section">
+    <div class="container">
+        
+        <div class="contact-form">
+            <p class="subtitle">Contact Us</p>
+            <h1>Get In Touch</h1>
+                    <form action="contact_process.php" method="POST">
+            <div class="input-group">
+                <label>Name</label>
+                <input type="text" name="u_name" placeholder="Your Name..." required>
+            </div>
+            <div class="input-group">
+                <label>Email</label>
+                <input type="email" name="u_email" placeholder="example@yourmail.com" required>
+            </div>
+            <div class="input-group">
+                <label>Subject</label>
+                <input type="text" name="u_subject" placeholder="Title..." required>
+            </div>
+            <div class="input-group">
+                <label>Message</label>
+                <textarea name="u_message" rows="5" placeholder="Type Here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-send">Send Now</button>
+        </form>
+        </div>
+
+        <div class="contact-info">
+            <p class="description">
+                In tempus nisl turpis, at ultricies dui eleifend a. Quisque et quam vel nunc consectetur pharetra euismod et elit.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone Number</h3>
+                    <p>+6282 4032 567</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Address</h3>
+                    <p>alura@site.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>Whatsapp</h3>
+                    <p>082-245-7253</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Our Office</h3>
+                    <p>2443 Oak Ridge Omaha, QA 45065</p>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.5404232051285!2d-0.1219623!3d51.503324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604b900d26973%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sen!2suk!4v1700000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

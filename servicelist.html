@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Services</title>
+
+
+
+    <style>
+        *{ margin:0; padding:0;}
+        html,body{ width:100%; height:100%; }
+
+        #main{width:100%;
+              height:180%;
+              background-color: rgb(204, 175, 137);
+              display: flex;
+            }
+        #block1{
+            width: 50%; height:98%;
+            margin:10px;
+        }
+        #block2{
+            width:30%; height:98%;
+            margin:10px;
+        }
+    
+    #block1 #box1{ width:100%;  height:450px; }
+    #block1 #box2{ width:100%;  height: 350px; }
+
+    #block1 #box3{ width:100%;  height: 200px; display: flex; justify-content: center;align-items: end;}
+    
+    #block1 #box1 #text{ width:400px;  height:300px;
+                    position: relative;
+                    top:-25%;
+                    left:50%;
+                    transform:translate(-50%,-50%);
+                    rotate:270deg;
+        }
+    #box1 #text h1{ font-size: 100px;}
+    #box1 #text h3{ text-align: center;}
+    
+    #box2 h1{font-size: 40px; margin-top:30px; text-align: center;}
+
+                    
+    #box2 #list{ width:70%;  height: 250px; margin-left:25%; }
+     li{margin: 10px;}
+    li a{font-size:17px; text-decoration: none; font-weight: bold;
+        color:black; text-align: center;}
+    li a:hover{text-decoration: underline;}
+
+    #box3 #bash1,#bash2{display: flex;align-items: center;}
+    #box3 #bash1{ width:30%;  height:70%;border-right:2px solid black;}
+    #box3 #bash1 h1{font-size: 40px; text-align:right;margin-left:40px;}
+    #box3 #bash2{ width:60%;  height:70%; margin-top: 20px;}
+    #box3 #bash2 li{margin-left: 30px;}
+
+    #block2 img{width:100%; height:100%; object-fit: cover;}
+
+
+/*--------------RESPONSIVE----------------*/
+    /* -----TABLET----RESPONSIVE-----*/
+    @media screen and (max-width:910px) {
+        #block1 #box2{ display: flex; flex-direction: column; justify-content: end;}
+        #block1 #box2 h1{font-size: 35px;}
+        #box3 #bash1 h1{margin-right:20px; margin-left:30px;}
+        #box3 #bash2 li a{font-size:15px; }
+    }
+
+     @media screen and (max-width:845px) {
+        #box3 #bash1 h1{margin-right:20px; margin-left:20px;}
+     }
+
+    @media screen and (max-width:780px) {
+    #block1 #box2 h1{font-size: 35px;}
+    #box2 li a{font-size:16px;}
+    #box3 #bash1 h1{font-size: 40px; margin-left:15px;}
+    #box3 #bash2 li{margin-left: 20px;}
+    #box3 #bash2 li a{font-size:15px; }
+    }
+
+    @media screen and (max-width:745px) { #block1{ width: 60%;}    }
+    
+     @media screen and (max-width:600px) {
+        #box3 #bash1 h1{font-size: 36px; margin-left:15px; }
+        #box3 #bash2 li a{font-size:13px; }
+     }
+    @media screen and (max-width:562px) {
+        #box1 #text h1{ font-size: 90px;}
+        #box1 #text h3{ font-size: 15px;}
+        #box3 #bash1 h1{font-size: 30px;}
+    }
+    @media screen and (max-width:550px) {
+        #box1 #text h1{ font-size: 90px;}
+        #box1 #text h3{ font-size: 15px;}
+    }
+     @media screen and (max-width:488px) {
+        #box3 #bash1 h1{font-size: 26px;}
+     }
+     @media screen and (max-width:428px) {
+        #box3 #bash1 h1{font-size: 23px;}
+        #box3 #bash2 li a{font-size:12px; }
+        #box2 li a{font-size:14px;}
+     }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="main">
+        <div id="block1">
+            <div id="box1">
+                <div id="text"><h1>Event<br>Planner</h1>
+                                <h3>Services by a.eventsphere</h3></div>
+            </div>
+            <div id="box2">
+                <h1>What We Provide</h1>
+                <div id="list">
+                <ul>
+                    <li><a href="">Event planning</a></li>
+                    <li><a href="">Wedding & Reception</a></li>
+                    <li><a href="">Wonderful Tablescapes</a></li>
+                    <li><a href="">Floral Decorations</a></li>
+                    <li><a href="">Lightining Setup</a></li>
+                    <li><a href="">Parties or Get-together Decor</a></li>
+                    <li><a href="">Hampers</a></li>
+                </ul>
+                </div>
+            </div>
+            <div id="box3">
+                <div id="bash1"><h1>More<br>Info</h1></div>
+                <div id="bash2">
+                    <ul>
+                    <li class="info"><a href="contact.html"> alura@site.com</a></li>
+                    <li class="info"><a href="contact.html"> 207-8767-425</a></li>
+                    <li class="info"><a href="contact.html"> Oak Ridge Omasha, QA 4370</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="block2"><img src="https://i.pinimg.com/1200x/8d/e6/8f/8de68fc18fc0cf5a1a05e6a202049a46.jpg" alt=""></div>
+    </div>
+</body>
+</html>

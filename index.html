@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+
+    <!--ICONS LINK-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
+
+
+    <!--CSS-FILE LINK-->
+    <link rel="stylesheet" href="style.css" class="css">
+
+
+    <!--FONTS LINK-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Archivo+Black&family=IM+Fell+Double+Pica:ital@0;1&family=Imperial+Script&family=Lovers+Quarrel&family=Meddon&family=Monsieur+La+Doulaise&family=MonteCarlo&family=Qwigley&family=Ruthie&family=Tangerine:wght@400;700&family=Uncial+Antiqua&family=Viaoda+Libre&family=Whisper&display=swap" rel="stylesheet">
+
+    <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="main">
+        <header>
+            <table>
+                <tr>
+                    <th class="colm1"><h3>Need event design?</h3></th>
+                    <th id="colm2"><h1>ALURA EVENTSPHERE</h1><h6>Gift Boxes, Crazing Tables, Event Design</h6></th>
+                    <th class="colm1"><h3>Looking for the perfect gift for someone special?</h3></th>
+                </tr>
+                <tr>
+                    <td class="row1"><a href="servicelist.html">VIEW OUR SERVICES</a></td>
+                    <td id="row2"></td>
+                    <td class="row1"><a href="VIEW OUR BOXES">VIEW OUR BOXES</a></td>
+                </tr>
+            </table>
+        </header>
+        <div id="fakeH"></div>
+
+        
+
+        <div id="navbar">
+            <div id="bar1">
+                <div class="icon" title="Instagram"><i class="ri-instagram-line"></i></div>
+                <div class="icon" title="Facebook"><i class="ri-facebook-fill"></i></div>
+                <div class="icon" title="SignUp"><a href="signup.html"><i class="ri-user-line"></i></a></div>
+                <div id="signup"><a href="signup.html"><button>SignUp</button></a></div>
+
+            </div>
+
+            <div class="menu-toggle">
+                <i class="ri-menu-3-line"></i>
+            </div>
+
+
+            <nav id="bar2">
+                <ul>
+                    <li id="home">HOME</li>
+                    <li><a href="#">GIFT-BOXES</a></li>
+                    <li><a href="Tablescape.html">CRAZING-TABLES</a></li>
+                    <li><a href="services.html">EVENT-DESIGN</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="homebar">
+            <ul id="home-toggle">
+                <li><a href="platform.html">Platform</a></li>
+                <li><a href="booking.html">registrations</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+
+
+<script>
+
+        $(document).ready(function(){
+            $("#home").click(function(){
+            $("#homebar").slideToggle();
+            });
+        });
+
+/*      $(".menu-toggle").click(function(){
+        $("#bar2").slideDown();
+      });
+        $(".menu-toggle").click(function(){
+        $("#bar2").slideUp();
+      });  */
+      $(".menu-toggle").click(function(){
+        $("#bar2").slideToggle();
+        $("#homebar").fadeOut();
+      });
+     
+</script>
+
+
+
+
+        
+<section class="page1">
+    <img class="bg-img" src="https://i.pinimg.com/736x/cf/10/20/cf10200e2546f3c8ed5c4a115802cf10.jpg" alt="">
+
+    <div class="content">
+        <div id="box1">
+            <h1>EVENT DESIGN</h1>
+            <h6>YOUR DREAM EVENT...DESIGNED TO PERFECTION</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+               Ducimus dignissimos laudantium possimus harum nemo.</p>
+            <a href="contact.html"><button>CONTACT US</button></a>
+        </div>
+
+        <div class="images">
+            <div id="box2">
+                <img src="https://i.pinimg.com/1200x/e6/68/bc/e668bc3f0d7e05e40c6e027de32005c9.jpg" alt="">
+            </div>
+
+            <div id="box3">
+                <img src="https://i.pinimg.com/1200x/aa/a5/f4/aaa5f4ab59af9f4b72f5bde652709754.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+
+
+
+        
+
+<div class="page2">
+    <div id="rect1">
+        <h1>EVENT SET-UP & DECOR</h1>
+        WE HANDLE THE DETAILS. YOU ENJOY YOUR CELEBRATION
+        <br><br>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Exercitationem sed, accusamus distinctio ipsam eos possimus
+            sapiente asperiores ab qui veritatis.
+        </p>
+    </div>
+
+    <div id="rect2">
+        <div class="slide">
+            <img src="https://i.pinimg.com/1200x/bd/52/1c/bd521c94ea2ce314c3c97b453360b3b2.jpg">
+        </div>
+
+        <div class="slide3">
+            <img src="https://i.pinimg.com/736x/81/5c/bb/815cbbeabba1c4da9fbf62b29ac15d69.jpg">
+        </div>
+
+        <div class="slide">
+            <img src="https://i.pinimg.com/1200x/26/27/af/2627afdae15ad5fc92569d39a3486a6b.jpg">
+        </div>
+    </div>
+</div>
+
+ 
+
+
+        <div class="page3">
+            <div id="content1">
+                <div id="pic1"><img src="https://i.pinimg.com/736x/a7/95/cc/a795cc5d46bf0c993a47130f1f7bf717.jpg"></div>
+                <div id="text1">
+                    <h1>Stunning____</h1>
+                    <h2>TABLESCAPES</h2>
+                    <br>
+                    <p>Lorem ipsum eos iste neque tempora voluptatibus excepturi ducimus inventore? Vel sint cumque sequi corporis laudantium praesentium velit aliquid porro modi rem. Excepturi, illo sapiente repudiandae ducimus quidem atque?</p>
+                    <a href="Tablescape.html"><button>view more</button></a>
+                </div>
+            </div>
+            <div id="content2">
+                
+                <div id="pics">
+                    <div class="pic" id="pic2"><img src="https://i.pinimg.com/1200x/90/aa/6c/90aa6cfd9bcbe65b5aa52cbc0b6c194f.jpg"></div>
+                    <div class="pic"><img src="https://i.pinimg.com/1200x/08/ca/94/08ca9402b1f2d38075044d8a39cefd85.jpg"></div>
+                    <div class="pic" id="pic3"><img src="https://i.pinimg.com/736x/79/94/da/7994dac8100236b6dbcbfa0fa382bed4.jpg"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="page4">
+            <div id="dash1">
+                <div id="head"><h1>Floral</h1><h3>DESIGN</h3></div>
+                <div id="para">
+                    <p>ELEVATE YOUR SPACE. ONE BLOOM AT A TIME.</p><br>
+                    <p>Lorem ipsum, fugit perspiciatis natus quidem, aspernatur et omnis doloribus tenetur odio tempora ab ipsum sequi dolores nesciunt obcaecati.</p></div>
+            </div>
+            <div id="dash2">
+                <div class="flora"><img src="https://i.pinimg.com/736x/4f/9e/65/4f9e653a66aad1a80c173513060c5c91.jpg"></div>
+                <div class="flora1"><img src="https://i.pinimg.com/1200x/4b/82/a8/4b82a873c72621cc2f0404c612413af4.jpg"></div>
+                <div class="flora"><img src="https://i.pinimg.com/1200x/5b/78/34/5b7834bc676fe02805dde2765049af6b.jpg"></div>
+            </div>
+            <a href="floral.html"><button>CLICK A REQUEST</button></a>
+        </div>
+
+
+
+
+
+        
+
+
+        <div class="page5">
+                <div id="text2">
+                    <div id="camera">
+                        <div id="c1"><img src="https://i.pinimg.com/1200x/f6/a5/27/f6a5274e87802ba4bbadda1be1656762.jpg" alt=""></div>
+                        <div id="c2"><img src="https://i.pinimg.com/736x/cd/84/0d/cd840d1c7a7c874fab7d6a9340e4341d.jpg" alt=""></div>
+                    </div>
+                    <div id="writing">
+                        <h1>Ajudgment-free zone so you can truly be yourself.</h1><br>
+                        <p>Lorem ipoloremque in minima facere quae doloribus, nemo laborum molestias asperiores tenetur! Nostrum quis eum hic sit facilis voluptas iste veritatis, voluptatibus voluptatem atque molestiae amet.</p>
+                    </div>
+                </div>
+                <div id="reel">
+                    <div id="gragh">
+                        <div class="photo"><img src="https://i.pinimg.com/1200x/9e/22/28/9e2228f33a7d350be4711f458a8604cd.jpg" alt=""></div>
+                        <div class="photo"><img src="https://i.pinimg.com/1200x/ba/2c/95/ba2c9514a4f54ec8a07d148a2cbba769.jpg" alt=""></div>
+                        <div class="photo"><img src="https://i.pinimg.com/1200x/14/c2/ed/14c2ed0629e72b260ec8cd4f3bfad929.jpg" alt=""></div>
+                    </div>
+                </div>
+
+        </div>
+
+
+    
+
+
+        <div class="page6">
+                <div id="services">
+                    <p>CHOOSE   YOUR   EXPERIENCE</p>
+                    <h1>SERVICES</h1>
+                </div>
+                <div id="servebox">
+                    <div class="left" id="l1"></div>
+                    <div class="left" id="l2"></div>
+                    <div class="center"><a href="services.html"><button>Big Events</button></a></div>
+                    <div class="right" id="r1"></div>
+                    <div class="right" id="r2"></div>
+                </div>
+        </div>
+
+
+
+
+        <div class="page7">
+            <div id="demo">
+                <h2>Features</h2>
+                <h1>OPTIMIZE EVERY<br>ASPECT OF<br>YOUR EVENTS</h1>
+                <p>a.eventsphere all-in-one event organizing offers a<br>wide variety of solutions to optimize event<br>planning, execution and monitoring.</p>
+            </div>
+
+
+            <div id="demo1">
+                <h1>Event registration</h1>
+                <p>Manage advanced attendee registrations with customizable forms, group registrations, and more.</p>
+                <ul>
+                    <li><a href="booking.html"><button>Discover event registrations</button></a></li>
+                    <li><a href="booking.html">Ticketing & payments</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    </li>
+                    <li><a href="booking.html">Event marketing & promotion</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    </li>
+                    <li><a href="booking.html">One-site check-in</a>
+                    <i class="ri-arrow-right-s-line"></i>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+                
+    
+
+
+        <footer>
+            <div id="about">
+                <h1>ABOUT US</h1>
+            </div>
+            <div id="details">
+                <div id="contact">
+                    <h2>Get In Touch</h2><br><br>
+                    <ul id="list">
+                    <li class="info"><a href="contact.html"><i class="ri-mail-line"></i> alura@site.com</a></li><br>
+                    <li class="info"><a href="contact.html"><i class="ri-phone-line"></i> 207-8767-425</a></li><br>
+                    <li class="info"><a href="contact.html"><i class="ri-map-pin-line"></i> Oak Ridge Omasha, QA 4370</a></li><br>
+                    <li class="info"><a href="contact.html"><i class="ri-whatsapp-line"></i> 207-8767-425</a></li><br>
+                    </ul>
+                </div>
+                <div id="query">
+                    <h1>We Always Make The Best</h1>
+                    <p>Lorem, ipsum doloeprehenderit. Eveniet dolores praesentium, modi tempore ipsum at maiores accusamus?</p>
+                    <a href="contact.html"><button>Contact Us</button></a>
+                </div>
+                
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
